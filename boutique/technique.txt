@@ -1,0 +1,145 @@
+- page d'accueil :
+
+<header>
+- 4 liens : accueil / produits / panier / admin
+- barre de recherche
+- icon
+</header>
+
+
+Techniques:
+------------------------------------------------------------------------------------
+  Liens:
+  Affichage via smarty : via le template header
+- Assigner un tableau (liens) dans le controller (index.php de front office) 
+- Faire une boucle (foreach) dans le template header afin de parcourir ce tableau.
+- Affichage dynamique.
+
+Barre de recherche:
+-Javascript/Jquery/Ajax/ ( à voir )
+
+Icônes:
+-Insertion en Css
+
+Titre:
+-Affichage du titre en dynamique.
+-Utiliser la class pour se connecter à la BDD => requete sql => recupération du titre.
+
+___________________________________________________________________________________
+
+<main>
+- affichage du contenue de la BDD
+- 4 categorie afficher / 2 produits par categorie 
+- affichage des dernier produits ajouter a la BDD (affichage par ID)
+</main>
+
+Techniques:
+-----------------------------------------------------------------------------------
+
+-- Utiliser la class pour se connecter à la BDD => requete sql => recupération des tables
+-- On recupère la fetch all (renvoi un tableau) puis on l'assigne a smarty
+-- Affichage en dynamique dans la template main via une foreach.
+___________________________________________________________________________________
+
+<footer>
+- copyright / adress / mail / lien social / cgn 
+</footer>
+
+Donnée bdd footer:
+-Affichage de la colonne footer depuis la bdd.
+-Utiliser la class pour se connecter à la BDD => requete sql => recupération de la table generale..
+
+
+************************************************************************************
+
+page produit :
+
+- template_header = header_accueil
+____________________________________________________________________________________
+
+<main>
+- barre de selection de categorie
+- article / produits affichage dynamique --> provient de la BDD
+</main>
+
+Techniques:
+------------------------------------------------------------------------------------
+
+- Connexion à la bdd : requete sql assigné à la variable $smarty.
+- Récupération de la table catégorie.
+- Récupération de la table article en fonction de la catégorie.
+- Affichage en dynamique.
+______________________________________________________________________________________
+- template_footer = footer_accueil 
+
+************************************************************************************
+
+Page : Articles
+
+- template_header = header_accueil
+_______________________________________________________________________________________
+<main>
+- affichage en plus gros de l'image du produit
+- déscription du produit
+- Nombre de quantité restante / a commander
+- Prix du produit
+- Boutton pour commander le produit 
+- Nom du produit 
+</main>
+
+Techniques:
+-------------------------------------------
+
+- on recupère l'id grâce au $_GET de l'url => condition.
+- Connexion à la bdd => requete => affichage du poduit.
+- on décremente la quantité du produit en stock.
+_______________________________________________________________________________________
+
+- Template_footer = footer_accueil 
+
+***************************************************************************************
+
+page panier :
+
+- template_header = header_accueil
+
+_______________________________________________________________________________________
+
+<main>
+- affichage des produits selectionner
+- somme total des produits
+- boutton commander / payer (baisser la quantiter du produit commander)
+</main>
+
+Techniques:
+--------------------------------------------------------------------------------------
+à voir à la fin
+_______________________________________________________________________________________
+
+- template_footer = footer_accueil
+
+***************************************************************************************
+
+
+1: quand on clique sur lien pannier controller reception $_SERVER query string .
+2: faire un script javascypte si l'url ne contient pas de pannier alors cibler tous les bouttons
+3: onclick recupère l'id du produit (utiliser local storage get_item et set_item)
+4: si dans l'url il y a le mot pannier , j'extrait les id de local storage et j'envoie en fetch 
+chaque id ou le tableau des id.
+5: le fichier php receptin chaque id et lance la requette select * from produit where ...
+6: retourne le tableau de json qu'on retourne a la fetch
+7: fetch reception le tableau json qui contient tous les produit et le dispatcher dans 
+notre tableau et faire la somme de tous les produits.
+8: un boutton pour passer la commande qui va degrader la quatité du produit.
+
+
+
+2eme solution:
+
+1: utiliser la super variable $_session.
+2: quand on clique sur lien pannier controller reception $_SERVER query string .
+3: faire un script javascypte si l'url ne contient pas de pannier alors cibler tous les bouttons
+4: onclick recupère l'id du produit et l'envoi au fichier au fichier php(fetch) pour 
+le stocker dans $_session.
+5: on assigne ue variable smarty qui vaut le tableau de $_session.
+6: dans le tpl faire le foreach

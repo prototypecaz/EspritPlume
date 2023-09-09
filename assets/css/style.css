@@ -1,0 +1,62 @@
+.burger {
+    font-size: 30px;
+}
+
+.chapitre1,.chapitre2{
+    background-image:url("../img/fond-header.png") ;
+    background-size: cover
+    
+}
+
+.plume {
+    background: url(../img/articles.png) no-repeat;
+    width: 784px;
+    height: 617px;
+    background-size: contain;
+}
+
+button {
+    font-size: 35px;
+    border-style: none;
+    padding:1px 4em;
+    
+    
+}
+
+.fondTable {
+    background: url("../img/fond-table.png") no-repeat;
+    background-position:bottom ;
+    background-size: cover;
+    
+    
+    
+}
+
+.fondTable,.btnFond,.livraison,.tarif {
+margin: 100px 0;
+
+}
+
+button,.ligne,footer {
+    background-color: #B667A9;
+}
+
+table,.tableau {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tableau th {
+    width: 350px;
+    
+}
+
+h1,.font,button,h4,h2 {
+    font-family: parisienne;
+    font-weight: bold;
+}
+
+h4,h2,.bleu,h1,.attention {
+    color:#605F95;
+    
+}

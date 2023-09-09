@@ -1,0 +1,91 @@
+1er étape   BDD
+
+
+
+2eme étape:
+
+front-office
+
+- site via smarty:
+
+- creation template front-office:
+- header / main / body / footer
+
+- connexion BDD
+______________________________________________________________________________________
+- page d'accueil :
+
+<header>
+- 4 liens : accueil / produits / panier / admin
+- barre de recherche
+- icon
+</header>
+
+<main>
+- affichage du contenue de la BDD
+- affichage des dernier produits ajouter a la BDD (affichage par ID)
+- 4 categorie afficher / 2 produits par categorie 
+</main>
+
+<footer>
+- copyright / adress / mail / lien social / cgn 
+</footer>
+
+_______________________________________________________________________________________
+barre de recherche :  DERNIERRE ETAPE
+- reconnais les marques et les produits
+
+_______________________________________________________________________________________
+page produit :
+
+- template_header = header_accueil
+
+<main>
+- barre de selection de categorie
+- article / produits affichage dynamique --> provient de la BDD
+</main>
+
+- template_footer = footer_accueil 
+
+______________________________________________________________________________________
+page article :
+
+- template_header = header_accueil
+
+<main>
+- affichage en plus gros de l'image du produit
+- déscription du produit
+- Nombre de quantité restante / a commander
+- Prix du produit
+- Boutton pour commander le produit 
+- Nom du produit 
+</main>
+
+- template_footer = footer_accueil 
+________________________________________________________________________________________
+page panier :
+
+- template_header = header_accueil
+
+<main>
+- affichage des produits selectionner
+- somme total des produits
+- boutton commander / payer (baisser la quantiter du produit commander)
+</main>
+
+- template_footer = footer_accueil
+
+________________________________________________________________________________________
+---------------------Guillaume le GAY---------------------------------------------------
+________________________________________________________________________________________
+page admin back-office :
+
+page de connexion -> formulaire = 
+
++ Ajouter (INSERT) / Supprimer (DELETE) / Modifier (UPDATE) des produits
+
++ Ajouter (INSERT) des categories
+
++ Modifier (UPDATE) les proprietes du site
+
+_______________________________________________________________________________________

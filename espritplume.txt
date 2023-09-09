@@ -1,0 +1,31 @@
+Structure du dossier pour le volume OS
+Le num‚ro de s‚rie du volume est D8AE-87A6
+C:.
+|   espritplume.txt
+|   index.html
+|   
+\---assets
+    +---css
+    |       style.css
+    |       
+    +---framework
+    |       jquery-3.4.1.slim.min.js
+    |       
+    +---img
+    |       anneaux.png
+    |       articles.png
+    |       fond-header.png
+    |       fond-table.png
+    |       maquette-plume.png
+    |       panier.png
+    |       plume-bleue.png
+    |       plume-rose.png
+    |       Plume_logo.png
+    |       
+    +---js
+    |       bootstrap.min.js
+    |       
+    \---lib
+            bootstrap.min.css
+            bootstrap.min.css.map
+            

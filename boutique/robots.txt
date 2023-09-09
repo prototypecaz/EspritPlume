@@ -1,0 +1,9 @@
+#Tous les robots sont autorisés
+User-Agent: *
+#Crawl-Delay:10 (permet au robot de rester un certain temps)
+#J'autorise le robot de crawl sur ce lien
+Allow: /index.php
+# Interdiction de crawl ces repertoire ou ces fichiers
+Disallow: /assets/
+Disallow: /assets/js/*.js
+Sitemap: http://www.guillaume.com/boutique/sitemap.xml
